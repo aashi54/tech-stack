@@ -1,0 +1,67 @@
+
+Js code execute inside browser (using js engine which is present only in browser)
+executinh js code outside browser was not possible
+
+chrome -> v8 engine
+firefox -> spider monkey
+
+v8 engine embedded with c++ => node.js
+
+# Node.js (Runtime environment for js)
+
+1) we can run js outside of the browser
+2) js can talk to native machine because of c++
+3) we can create webserver in js language
+
+window objects is not present with node.js (like alert() etc..)
+
+...............................................................
+
+# Modules
+
+split files into smaller code
+
+build in modules -> http, fs, os, crypto, url
+
+const url = require("url")
+
+const myUrl = url.parse(req.url)
+..........................................
+
+
+How node.js works
+
+request -> event queue -> event loop (it watches event queue and take request from it) -> 
+if(request is non blocking (Async)) it will return response
+else if (request is blocking (Sync)) it will tell thread pool that it need worker/thread to complete the work
+   then return request
+
+
+.....................................................................
+
+http methods
+
+Get -> when want to et some data from server
+Post -> Submit data to server
+Put -> Update resource or create it if it doesn't exist.
+Patch -> Apply partial modifications to a resource.
+Delete -> Request removal of resource.
+
+.............................................................
+
+Express :- node js framework
+
+in node.js we handle everything from scratch
+
+..............................
+Versioning
+
+example :- 18.2.1
+1 :- Minor fixes (Uptional update)
+2 :- Recommended bug fix (or feature added)
+18 :- Mojor release/ can break existing code
+
+
+^version :- compatible with version  (update ony minor and recommended , not major release)
+~version :- only update minor fixes
+
