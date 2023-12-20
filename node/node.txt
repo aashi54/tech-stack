@@ -110,3 +110,8 @@ Server error responses (500 – 599)
 504 -> Gateway Timeout (cannot get a response in time)
 
 ...................................
+
+MongoDb
+
+No-Sql document based db 
+works on BSON format
