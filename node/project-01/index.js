@@ -7,6 +7,20 @@ const PORT = 8000;
 // MiddleWare 
 app.use(express.urlencoded({extended:false}))
 
+
+// this middleware will neither end nor return/ proceed (hold)
+/*
+ app.use((req,res,next) => {
+    console.log("Hello from middleware")
+
+      // req.myName = "Asmita Patidar" (next middleware/route will have access of this property)
+     // if we return res from her user will not go ahead
+     // next() -> to call next function
+// })
+
+*/
+
+
 // Routes
 app.get('/users', (req, res) => {
     const html = `
