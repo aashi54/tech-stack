@@ -1,10 +1,12 @@
 const express = require("express");
 const path = require('path')
-const urlRoute = require("./routes/url");
-const staticRouter = require('./routes/staticRouter')
 const { connectToMongoDB } = require("./connect");
 const URL = require("./models/url");
 require("dotenv").config();
+
+const urlRoute = require("./routes/url");
+const staticRouter = require('./routes/staticRouter')
+const userRoute = require('./routes/user')
 
 const app = express();
 const PORT = 8001;
@@ -30,10 +32,11 @@ app.use(express.urlencoded({extended:false}))
 // })
 
 app.use("/url", urlRoute);
+app.use("/user", userRoute)
 
 app.use("/", staticRouter)
 
-app.get("/:shortId", async (req, res) => {
+app.get("/url/:shortId", async (req, res) => {
   const shortId = req.params.shortId;
   const entry = await URL.findOneAndUpdate(
     {
