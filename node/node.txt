@@ -41,7 +41,7 @@ else if (request is blocking (Sync)) it will tell thread pool that it need worke
 
 http methods
 
-Get -> when want to et some data from server
+Get -> when want to send some data from server
 Post -> Submit data to server
 Put -> Update resource or create it if it doesn't exist.
 Patch -> Apply partial modifications to a resource.
@@ -65,3 +65,7 @@ example :- 18.2.1
 ^version :- compatible with version  (update ony minor and recommended , not major release)
 ~version :- only update minor fixes
 
+...................................................
+
+SSR => server side rendering -> render at server and send to rendered data to client (fast and secure)
+CSR => client side rendering -> send data like in JSON then client read json data & render on screen
