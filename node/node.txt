@@ -80,3 +80,33 @@ Execute any code.
 Make changes to the request and the response objects.
 End the request-response cycle.
 Call the next middleware function in the stack.
+
+....................................................
+
+http headers are an imp part of the API request and response as they represent the meta-data
+associate with the API request and response.
+
+headers carry information for the request and response body
+
+....................................................
+
+Status code
+
+Informational responses (100 – 199)
+Successful responses (200 – 299)
+Redirection messages (300 – 399)
+Client error responses (400 – 499)
+Server error responses (500 – 599)
+
+200 -> request succeeded
+201 -> created
+204 -> There is no content to send for this request, but the headers may be useful
+400 -> bad request (client error)
+401 -> unauthorized
+403 -> does not have access rights
+404 -> server cannot find the requested resource
+500 -> (Internal server error) he server has encountered a situation it does not know how to handle.
+501 -> Not Implemented
+504 -> Gateway Timeout (cannot get a response in time)
+
+...................................
