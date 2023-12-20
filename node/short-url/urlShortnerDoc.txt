@@ -1,0 +1,13 @@
+URL Shortner
+
+Takes valid URL and return shortened URL, redirecting the user to the 
+previously provided URL.
+
+Also keep track of total visits/clicks on the URL
+Routes
+
+POST :- /url -> Generates a new short URL and return the short URL
+
+GET :- /:id -> Redirects the user to the original URL
+
+GET :- /url/analytics/:id -> returns the clicks for the provided short id
