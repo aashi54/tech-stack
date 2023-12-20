@@ -115,3 +115,19 @@ MongoDb
 
 No-Sql document based db 
 works on BSON format
+
+.....................................
+
+Server side rendering
+
+web page render from server
+
+templating engines
+EJS :- embedded javascript templating
+Pug js
+handlebar
+
+    <!-- <% urls.forEach(url => { %>
+        <li> <%= url.shortId %></li>
+   <%
+    })%> -->
