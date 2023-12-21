@@ -31,5 +31,32 @@ fault isolation
 Granulary scaling :- scale independently
 
 
+Design Patterns
+Team working on various projects use the same pattern to build similar applications
+
+it's a software template or a description to solve a problem that occurs in multiple
+instances while designing a software app/ framework
+
+1) Aggregator
+Collects related items of data and displays them :-
+ based on DRY principle (aggregate business logic(received my multiple) in one service )
+when we need output of data by combining multiple services
+
+2) API GATEWAY
+how can we request information from multiple MIcroservices 
+how can different UI request to same backend services
+
+Acts as an entry point to forward the clients request to appropriate MIcroservices
+
+3) Chained / chain of responsibility
+Produces a single output which is a combination of multiple chained outputs
+recommeneded not to make long chain
+
+4) Asyncronous messaging
+All the services can communicate with each other. But they do not have to communicate with earch other sequentially
+
+5) Database
+Database per service or shared Database
+
 
 
