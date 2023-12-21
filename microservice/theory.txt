@@ -1,0 +1,35 @@
+Why MIcroservices
+
+Before MIcroservices :- Monolithic architecture
+Monolithic architecture is like a big container components of an application are assembled together and tightly packaged
+all components of Monolithic program are interconnected and interdependent
+
+disadvantage :-
+large and complex application :- becomes difficult to understand and modify
+Slow development 
+difficult to frequet deployment :- change in one component needs redeployment of complete application
+Unscalable :-
+Unreliable :- one component fail , entire service go down
+Inflexible :- expensive (time & cost) can't adapt to new tech
+
+
+........................................
+
+In MIcroservice architecture, each service is self-container and implements a single business capability
+communication between MIcroservices is stateless communication
+
+Feature:
+Small focused :- simplicity, so it can be re-written and maintained without extra efforts
+Loosely coupled :- independent of each other , development and deployment quick
+Language neutral
+Bounded context :- each MIcroservice doesn't need to knoe the implementation of other service 
+
+Advantage :
+independent deployment
+independent development
+fault isolation
+Granulary scaling :- scale independently
+
+
+
+
