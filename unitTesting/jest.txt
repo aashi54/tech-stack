@@ -75,3 +75,6 @@ When to use: Use it when you want to define a custom behavior for the mock funct
 
 
 
+jest.fn().mockReturnThis(),
+expect().toHaveBeenCalledWith()
+expect().not.toHaveBeenCalled()
