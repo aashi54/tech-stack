@@ -59,4 +59,22 @@ describe('handleGenerateNewShortURL', () => {
   });
 
 
+  test('should return 400 status with error message for missing URL', async () => {
+    const req = { body: {} };
+    const res = { 
+        status: jest.fn().mockReturnThis(), 
+        json: jest.fn()
+     };
+
+    await handleGenerateNewShortURL(req, res);
+
+    // Assertions
+    expect(res.status).toHaveBeenCalledWith(400);
+    expect(res.json).toHaveBeenCalledWith({ error: 'Url is required' });
+
+    // Ensure URL.create is not called when URL is missing
+    expect(URL.create).not.toHaveBeenCalled();
+  });
+
+
 });
