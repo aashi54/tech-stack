@@ -1,0 +1,77 @@
+
+
+
+Jest is a JavaScript testing framework developed by Facebook
+Jest provides a simple and efficient way to write unit tests, allowing developers to ensure that their
+code works as intended and catch potential bugs early in the development process.
+
+Unit Testing:
+Unit testing is a software testing approach where individual units or components of a software
+application are tested in isolation
+
+added new feature or updated any existing feature if it will break the tests which give you indication wheather or not to use it.
+
+
+Mocking :-
+
+Mocking in Jest refers to the practice of replacing a part of your application,
+typically external dependencies or complex components, with fake implementations during the testing process.
+
+
+Mocking methods/functions
+
+1) jest.mock(moduleName, factory):
+
+Description: Automatically mocks a module. This is useful when you want to replace the actual implementation 
+            of a module with a mock implementation.
+When to use: Use it when you want to replace the actual implementation of a module with a mock implementation.
+factory = A function that returns the mocked implementation of the module
+
+2) jest.fn(implementation):
+
+Description: Creates a new mock function.
+When to use: Use it when you want to create a mock function for testing purposes. 
+             You can provide an optional implementation.
+
+3) mockReturnValue(value):
+
+Description: Sets a return value for the mock function.
+When to use: Use it when you want the mock function to always return a specific value.
+
+4) mockReturnValueOnce(value):
+
+Description: Sets a one-time return value for the mock function.
+When to use: Use it when you want the mock function to return a specific value for the next call only.
+
+5) mockResolvedValue(value):
+
+Description: Similar to mockReturnValue, but for promises. Sets a return value for a mocked promise.
+When to use: Use it when dealing with asynchronous code and you want to mock the resolved value of a promise.
+
+6) mockResolvedValueOnce(value):
+
+Description: Similar to mockReturnValueOnce, but for promises. Sets a one-time return value for a mocked promise.
+When to use: Use it when dealing with asynchronous code and you want to mock the resolved value of a promise for the next call only.
+
+7) mockRejectedValue(value):
+
+Description: Sets a return value for the mock function, but for a rejected promise.
+When to use: Use it when dealing with asynchronous code and you want to mock the rejection value of a promise.
+
+8) mockRejectedValueOnce(value):
+
+Description: Similar to mockResolvedValueOnce, but for rejected promises. Sets a one-time return value for a mocked promise rejection.
+When to use: Use it when dealing with asynchronous code and you want to mock the rejection value of a promise for the next call only.
+
+9) mockImplementation(implementation):
+
+Description: Sets a custom implementation for the mock function.
+When to use: Use it when you want to define a custom behavior for the mock function.
+
+10) mockImplementationOnce(implementation):
+
+Description: Similar to mockImplementation, but for a one-time custom implementation.
+When to use: Use it when you want to define a custom behavior for the mock function for the next call only.
+
+
+
