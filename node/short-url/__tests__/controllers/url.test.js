@@ -1,6 +1,9 @@
 
 const {handleGenerateNewShortURL} = require('../../controllers/url');
 
+
+jest.mock('../../models/url')
+
 const request = {
     body : {
         url : "fakeurl.com"
@@ -8,6 +11,6 @@ const request = {
 }
 
 
-test('Generate new short url', () => {
-    handleGenerateNewShortURL(request)
+test('Generate new short url', async () => {
+   await handleGenerateNewShortURL(request)
 })
