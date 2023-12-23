@@ -152,3 +152,43 @@ client -> Auth meddleware (checks for cookies values or uid , if valid calls nex
 2) Stateless :- Which has no state
 
 uuid :- generate session id
+
+..................................................
+
+server creates JWT token , but how server send this to client in secure way?
+1) cookies -> res.cookie...
+  server creates cookie..
+  browsers store cookie and send to server when client request something from server (default behavior of browser)
+
+  cookies are domain specific,
+  we can set parameters -> domain, expire....etc
+
+  domain -> .google.com -> if we logged in gmail, and when we open youtube it will automatically open with same email id
+      (using same cookie for .google.com domain)
+
+2) response
+
+server will create token 
+ res.json({token})
+ now it's user responsibility to user this token
+
+ but how to get this token from server?
+
+// one way
+ header : {
+    Token : token
+ }
+
+ // standard way
+ header : {
+    Authentication: "Beaer <token>"
+ }
+
+ in code
+
+ res.cookie("uid", token) --> return res.json({token})
+
+ in middleware
+  userid = req.header?['authentication']
+
+  token = userid.split('Bearer')[1]
