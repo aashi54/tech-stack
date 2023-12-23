@@ -144,6 +144,9 @@ if user request to server with that uid , server will check who is user with tha
 
 How to tranfer uid :- cookies, response, headers
 
+users logged out if we restart server
+it's memory intensive (server have Limited memory )
+
 client -> Auth meddleware (checks for cookies values or uid , if valid calls next(), else reject the request) -> endpoint route
 
 2) Stateless :- Which has no state
