@@ -76,5 +76,4 @@ describe('handleGenerateNewShortURL', () => {
     expect(URL.create).not.toHaveBeenCalled();
   });
 
-
 });

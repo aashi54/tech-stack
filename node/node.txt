@@ -148,3 +148,4 @@ client -> Auth meddleware (checks for cookies values or uid , if valid calls nex
 
 2) Stateless :- Which has no state
 
+uuid :- generate session id

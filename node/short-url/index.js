@@ -1,6 +1,8 @@
 const express = require("express");
 const path = require('path')
+const cookieParser = require('cookie-parser')
 const { connectToMongoDB } = require("./connect");
+const {restrictToLoggedinUserOnly, checkAuth} = require('./middlewares/auth')
 const URL = require("./models/url");
 require("dotenv").config();
 
@@ -23,6 +25,8 @@ app.use(express.json());
 
 //middleware to parse form data
 app.use(express.urlencoded({extended:false}))
+app.use(cookieParser())
+
 
 // app.get("/test", async(req,res) => {
 //     const allUrls = await URL.find({})
@@ -30,11 +34,11 @@ app.use(express.urlencoded({extended:false}))
 //         urls: allUrls
 //     })
 // })
-
-app.use("/url", urlRoute);
+// , restrictToLoggedinUserOnly
+app.use("/url", restrictToLoggedinUserOnly, urlRoute);
 app.use("/user", userRoute)
 
-app.use("/", staticRouter)
+app.use("/",checkAuth, staticRouter)
 
 app.get("/url/:shortId", async (req, res) => {
   const shortId = req.params.shortId;
