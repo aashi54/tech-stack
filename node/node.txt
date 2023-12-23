@@ -192,3 +192,9 @@ server will create token
   userid = req.header?['authentication']
 
   token = userid.split('Bearer')[1]
+
+  ............................................
+
+  Authentication :- User belongs to that particular application
+  Authorization :- checking for a particular resouce are you authorize to access that?
+  
