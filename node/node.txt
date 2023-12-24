@@ -224,4 +224,12 @@ server will create token
 
   // read node.js stream documentation
 
+...............................................................................
+
+How to scale node.js application 
+
+Cluster
+
+Clusters of Node.js processes can be used to run multiple instances 
+of Node.js that can distribute workloads among their application threads.
   
