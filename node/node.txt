@@ -74,12 +74,34 @@ CSR => client side rendering -> send data like in JSON then client read json dat
 
 Middleware
 
-Middleware functions can perform the following tasks:
+Middleware functions in Express are functions that have access to the request object (req), 
+the response object (res), and the next middleware function in the application’s request-response cycle.
+Middleware functions can perform various tasks, modify the request and response objects, 
+end the request-response cycle, and call the next middleware in the stack.
 
-Execute any code.
-Make changes to the request and the response objects.
-End the request-response cycle.
-Call the next middleware function in the stack.
+built-in middleware functions
+
+1) express.json()
+This middleware is used to parse incoming JSON requests. 
+It adds a body property to the request object containing the parsed JSON data.
+
+2) express.urlencoded()
+This middleware is used to parse incoming requests with URL-encoded data. 
+It populates the req.body with the key-value pairs.
+extended: true -> Supports nested objects and arrays in the URL-encoded data.
+extended : false -> Does not support nested objects or arrays in the URL-encoded data.
+
+3) express.static('public')
+This middleware is used to serve static files, such as images, CSS, and JavaScript files.
+This assumes that your static files are in the "public" directory.
+
+4) cookie-parser
+app.use(cookieParser());
+
+5) morgan, helmet
+
+This middleware is used to parse cookies attached to the client's request and populate
+req.cookies with an object keyed by the cookie names.
 
 ....................................................
 
