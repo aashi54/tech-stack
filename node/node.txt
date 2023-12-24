@@ -139,6 +139,28 @@ headers carry information for the request and response body
 
 ....................................................
 
+Mongoose provides a variety of functions for interacting with MongoDB
+
+1) find :- const users = await User.find({ role: 'admin' });
+It used to retrieve multiple documents from a collection based on a query.
+
+2) findOne :- const user = await User.findOne({ username: 'john_doe' });
+Similar to find, but it returns only the first document that matches the query.
+
+3) updateOne and updateMany :- await User.updateOne({ username: 'john_doe' }, { $set: { password: 'new_password' } });
+Used to update a single document (updateOne) or multiple documents (updateMany) that match the specified filter.
+
+4) deleteOne and deleteMany :- await User.deleteOne({ username: 'john_doe' });
+
+5) findOneAndDelete, findOneAndRemove, findOneAndReplace, findOneAndUpdate
+const deletedUser = await User.findOneAndDelete({ username: 'john_doe' });
+
+6) countDocuments :- const count = await User.countDocuments({ role: 'admin' });
+Counts the number of documents in a collection that match the specified filter.
+
+
+...............................................................
+
 Status code
 
 Informational responses (100 – 199)
