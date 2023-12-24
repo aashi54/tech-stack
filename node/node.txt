@@ -303,4 +303,18 @@ Cluster
 
 Clusters of Node.js processes can be used to run multiple instances 
 of Node.js that can distribute workloads among their application threads.
+
+..............................................
+
+Accessibility- A11y
+
+The goal of accessibility is to provide equal access and opportunities
+ for everyone, regardless of their abilities or disabilities.
+
+ 1) Use semantic HTML tags (e.g., <nav>, <main>, <section>) to provide a clear structure to your content. 
+
+ 2) Provide Alternative Text for Images:
+ 3) Keyboard Navigation:
+ 4) use Focus for currently focused element
+ 5) Contrast and Color:
   
