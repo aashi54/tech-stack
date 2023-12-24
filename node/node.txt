@@ -105,6 +105,33 @@ req.cookies with an object keyed by the cookie names.
 
 ....................................................
 
+ejs :- embedded javascript
+templating engine
+
+1) app.set("view engine", "ejs"):
+
+This line sets the view engine for your Express application to EJS (Embedded JavaScript). 
+EJS is a templating engine that allows you to embed JavaScript code directly into your HTML templates. 
+When you render a view in your Express application, it will use EJS to process the templates.
+
+After setting the view engine, Express assumes that your views (templates) will have the file 
+extension specified (in this case, .ejs). 
+
+2) app.set("views", path.resolve("./views")):
+
+This line sets the directory where Express will look for the view templates
+
+3) Port Configuration:
+app.set("port", process.env.PORT || 3000);
+
+This line sets the port on which the Express application will listen. 
+It uses the value of the environment variable PORT if available; otherwise, it defaults to port 3000.
+
+4) Environment Configuration:
+
+app.set("env", process.env.NODE_ENV || "development");
+........................................................
+
 http headers are an imp part of the API request and response as they represent the meta-data
 associate with the API request and response.
 
