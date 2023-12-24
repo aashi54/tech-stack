@@ -53,6 +53,24 @@ describe("POST /api/register", () => {
         expect(jsonMock).toHaveBeenCalledWith({
             error: "username and email required"
         })
-        // expect(app.users).toHaveLength(0);
+       
     })
+})
+
+describe('GET /api/user' , () => {
+   test('return list of all users' , async () => {
+ 
+    // const users = [];
+    // jest.resetModules(); 
+    // jest.resetAllMocks(); 
+
+    const req = {};
+    const res = {
+        json: jest.fn()
+    }
+
+   await getAllUsers(req, res);
+
+   expect(res.json).toHaveBeenCalledWith(expect.arrayContaining([]));
+   })
 })

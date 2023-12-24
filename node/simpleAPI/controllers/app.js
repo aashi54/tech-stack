@@ -14,7 +14,7 @@ async function registerNewUser(req, res) {
 }
 
 async function getAllUsers(req, res) {
-  return res.json(users);
+    res.json(users);
 }
 
 module.exports = { registerNewUser, getAllUsers };
