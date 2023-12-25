@@ -55,3 +55,19 @@ import 'cart/CartIndex';
 import('./bootstrap.js')
 
 6) In container html file create divs with same id used in MFEs
+
+7) for css 
+npm install style-loader css-loader --save-dev
+ 
+ add in webpack of module
+  module: {
+        rules: [
+            // ... other rules
+            {
+                test: /\.css$/,
+                use: ['style-loader', 'css-loader'],
+            },
+        ],
+    },
+
+8) add :-  import '../public/index.css' in navbar index.js file
