@@ -1,0 +1,57 @@
+Microfrontend is an architectural style where a front-end application is broken down into smaller, 
+independent "microapps" that can be developed, deployed, and scaled independently. 
+Each microfrontend represents a self-contained feature or business capability.
+
+Independent Development
+Scalibility
+Isolation :-- Bugs and changes in one microfrontend won't affect others,
+Technology Diversity
+
+Packages :- 
+webpack :- combine multiple files and create minimize verson of app for production -> multi input -> single input
+webpack-cli :- It provides commands to interact with Webpack from the terminal.
+webpack-dev-server :- provides a development server with live reloading
+html-webpack-plugin :- plugin for Webpack that simplifies the creation of an HTML file to serve your bundles.
+
+
+
+=> Module federation plugin
+
+feature in Webpack that allows you to dynamically share and load code (JavaScript modules) between different 
+applications or parts of a single application.
+
+Steps 
+
+1) Import module federation plugin :- inside webpack.config.js file of modules
+const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPlugin') 
+
+2) Configure MFE in webpack config
+ inside plugin
+
+new ModuleFederationPlugin({
+            name: 'cart',
+            filename: 'remoteEntry.js', // can give any name
+            exposes: {
+                './CartIndex': './src/index'
+            }
+        })
+
+
+3) Use MFE in container
+
+new ModuleFederationPlugin({
+            name: 'container',
+            remotes: {
+                products: 'products@http://localhost:3001/remoteEntry.js',
+                cart: 'cart@http://localhost:3002/remoteEntry.js'
+            }
+        })
+
+4) Bootstaping :- create folder bootstrap.js in src of container
+
+import 'cart/CartIndex';
+
+5) Import MFEs in container index.js
+import('./bootstrap.js')
+
+6) In container html file create divs with same id used in MFEs
