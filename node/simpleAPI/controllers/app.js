@@ -13,33 +13,37 @@ async function registerNewUser(req, res) {
   return res.status(201).json(newUser);
 }
 
+
+
 async function getAllUsers(req, res) {
-    res.json(users);
+  res.json(users);
 }
 
-async function editUser(req, res){
-  const {userId} = req.params;
-  const {email, username} = req.body;
 
-  if(!email && !username){
-    return res.status(400).json({error: "Atleast one field required"})
+
+async function editUser(req, res) {
+  const { userId } = req.params;
+  const { email, username } = req.body;
+
+  if (!email && !username) {
+    return res.status(400).json({ error: "Atleast one field required" });
   }
 
   const userToUpadte = users.find((user) => user.id === userId);
 
-  if(!userToUpadte){
-    return res.status(400).json({error : "user not found"})
+  if (!userToUpadte) {
+    return res.status(400).json({ error: "user not found" });
   }
 
-  if(email){
-    userToUpadte.email = email
+  if (email) {
+    userToUpadte.email = email;
   }
 
-  if(username){
-    userToUpadte.username = username
+  if (username) {
+    userToUpadte.username = username;
   }
 
-  return res.json(userToUpadte)
+  return res.json(userToUpadte);
 }
 
-module.exports = { registerNewUser, getAllUsers , editUser};
+module.exports = { registerNewUser, getAllUsers, editUser };

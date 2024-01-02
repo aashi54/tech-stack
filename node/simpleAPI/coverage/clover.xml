@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1703573057711" clover="3.2.0">
+  <project timestamp="1703573057711" name="All files">
+    <metrics statements="21" coveredstatements="9" conditionals="14" coveredconditionals="4" methods="4" coveredmethods="2" elements="39" coveredelements="15" complexity="0" loc="21" ncloc="21" packages="1" files="1" classes="1"/>
+    <file name="app.js" path="C:\Users\c\Desktop\tech stack\node\simpleAPI\controllers\app.js">
+      <metrics statements="21" coveredstatements="9" conditionals="14" coveredconditionals="4" methods="4" coveredmethods="2"/>
+      <line num="1" count="1" type="stmt"/>
+      <line num="4" count="2" type="stmt"/>
+      <line num="6" count="2" type="cond" truecount="4" falsecount="0"/>
+      <line num="7" count="1" type="stmt"/>
+      <line num="10" count="1" type="stmt"/>
+      <line num="11" count="1" type="stmt"/>
+      <line num="13" count="1" type="stmt"/>
+      <line num="19" count="1" type="stmt"/>
+      <line num="25" count="0" type="stmt"/>
+      <line num="26" count="0" type="stmt"/>
+      <line num="28" count="0" type="cond" truecount="0" falsecount="4"/>
+      <line num="29" count="0" type="stmt"/>
+      <line num="32" count="0" type="stmt"/>
+      <line num="34" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="35" count="0" type="stmt"/>
+      <line num="38" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="39" count="0" type="stmt"/>
+      <line num="42" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="43" count="0" type="stmt"/>
+      <line num="46" count="0" type="stmt"/>
+      <line num="49" count="1" type="stmt"/>
+    </file>
+  </project>
+</coverage>

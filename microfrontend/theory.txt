@@ -8,7 +8,7 @@ Isolation :-- Bugs and changes in one microfrontend won't affect others,
 Technology Diversity
 
 Packages :- 
-webpack :- combine multiple files and create minimize verson of app for production -> multi input -> single input
+webpack :- combine multiple files and create minimize verson of app for production -> multi input -> single output
 webpack-cli :- It provides commands to interact with Webpack from the terminal.
 webpack-dev-server :- provides a development server with live reloading
 html-webpack-plugin :- plugin for Webpack that simplifies the creation of an HTML file to serve your bundles.
@@ -59,7 +59,7 @@ import('./bootstrap.js')
 7) for css 
 npm install style-loader css-loader --save-dev
  
- add in webpack of module
+ add in webpack of modules
   module: {
         rules: [
             // ... other rules

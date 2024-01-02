@@ -15,7 +15,7 @@ Inflexible :- expensive (time & cost) can't adapt to new tech
 
 ........................................
 
-In MIcroservice architecture, each service is self-container and implements a single business capability
+In Microservice architecture, each service is self-container and implements a single business capability
 communication between MIcroservices is stateless communication
 
 Feature:

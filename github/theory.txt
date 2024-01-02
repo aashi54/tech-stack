@@ -1,0 +1,76 @@
+
+ls :- list all folders
+mkdir dir-name :- make new folder
+cd dir-name :- inside dir-name
+
+.git folder holds git history , git provides this folder
+git init :- initialize .git folder  (hidden)
+ls -a :- shows all hidden folders
+ls .git :- shows all files/folders inside .git
+
+touch file-name :- create new file
+rm -rf file-name :- remove/ delete file
+
+git status :- shows changes which are not in the history of your project (untracked files)
+git add . / git add file-names :- added staging area 
+git commit -m "give msg"
+
+vi file-name :- go inside vim  :- to save :- esc + : wq , to quit :- :q
+cat file-name :- shows whatever things available in the file
+
+// old way -> git restore --staged file-name :- to unstage file (again added to untracked)
+git reset file-name :- to unstage file (again added to untracked)
+
+git log :- view history of project
+
+git reset commit_id :- whaterver commit above this id will 
+git stash :- don't want to commit and don't want in history (just put back stage)
+
+git stash pop :- whatever in stash come back
+
+git stash clear :- clear all stash 
+
+git remote add origin URL :- add repo url to our project
+git remote -v :- shows all urls attached to this folder
+
+git push origin master :- push changes to master branch
+
+git branch branch-name :- create new branch
+git checkout branch-name :- head is on branch-name (means all the new commits will be added to this branch)
+                           main branch will be as it is, new branch will move 
+
+
+git clone url :- clone repo
+git remote upstream url :- from where you forked 
+
+
+one branch can open only 1 pull request
+
+git push origin branch-name
+git push upstream ....not allowed
+
+if remove any commit then force push => git push origin kunal -f
+
+git fetch --all --prune :- fetch all commits ( also that is deleted) and upstreams (changes done by others)
+
+git reset -hard upstream/main :- reset main branch of your origin to the main branch of upstream origin
+then :- git push origin main 
+
+other ways
+git pull upstream main 
+git push orgin main 
+
+
+new branch always created from head :- so make sure main branch is up to date 
+
+Squashing commits
+
+
+pick and s 
+git rebase -i id 
+
+
+
+
+
+

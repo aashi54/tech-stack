@@ -1,6 +1,6 @@
 
 Js code execute inside browser (using js engine which is present only in browser)
-executinh js code outside browser was not possible
+execution js code outside browser was not possible
 
 chrome -> v8 engine
 firefox -> spider monkey
@@ -57,7 +57,7 @@ in node.js we handle everything from scratch
 Versioning
 
 example :- 18.2.1
-1 :- Minor fixes (Uptional update)
+1 :- Minor fixes (optional update)
 2 :- Recommended bug fix (or feature added)
 18 :- Mojor release/ can break existing code
 
@@ -97,11 +97,12 @@ This assumes that your static files are in the "public" directory.
 
 4) cookie-parser
 app.use(cookieParser());
+This middleware is used to parse cookies attached to the client's request and populate
+req.cookies with an object keyed by the cookie names.
 
 5) morgan, helmet
 
-This middleware is used to parse cookies attached to the client's request and populate
-req.cookies with an object keyed by the cookie names.
+
 
 ....................................................
 
@@ -163,7 +164,7 @@ Counts the number of documents in a collection that match the specified filter.
 
 Status code
 
-Informational responses (100 – 199)
+Informational responses (100 – 199) :- used to inform the client about the server's willingness to continue or switch
 Successful responses (200 – 299)
 Redirection messages (300 – 399)
 Client error responses (400 – 499)
@@ -176,7 +177,7 @@ Server error responses (500 – 599)
 401 -> unauthorized
 403 -> does not have access rights
 404 -> server cannot find the requested resource
-500 -> (Internal server error) he server has encountered a situation it does not know how to handle.
+500 -> (Internal server error)  server has encountered a situation it does not know how to handle.
 501 -> Not Implemented
 504 -> Gateway Timeout (cannot get a response in time)
 
@@ -211,14 +212,14 @@ Authentication
 Auth patterns
 1) Statefull :- Which maintains state or data on server side
 example :- if i give username and password to server it will give me sesson uid, user with that uid can request to server
-if user request to server with that uid , server will check who is user with that specific id and if valid then return the response
+if user request to server with that uid , server will check who is the user with that specific id and if valid then return the response
 
 How to tranfer uid :- cookies, response, headers
 
 users logged out if we restart server
 it's memory intensive (server have Limited memory )
 
-client -> Auth meddleware (checks for cookies values or uid , if valid calls next(), else reject the request) -> endpoint route
+client -> Auth middleware (checks for cookies values or uid , if valid calls next(), else reject the request) -> endpoint route
 
 2) Stateless :- Which has no state
 
@@ -252,7 +253,7 @@ server will create token
 
  // standard way
  header : {
-    Authentication: "Beaer <token>"
+    Authentication: "Bearer <token>"
  }
 
  in code
